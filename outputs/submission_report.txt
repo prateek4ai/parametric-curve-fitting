@@ -1,0 +1,9 @@
+Parametric Curve Fitting Results
+Theta (radians): 0.304676
+Theta (degrees): 17.4566
+M: 0.009100
+X: 14.200000
+Total L1 Loss: 71123.3051
+
+---
+Fitted curve plot saved as outputs/fitted_curve.png
