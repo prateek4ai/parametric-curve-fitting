@@ -25,25 +25,25 @@ This project demonstrates parametric curve fitting and model optimization in Pyt
     Three unknowns are present in the underlying parametric equations.: $\theta$, $M$, and $X$.
     Fitting these parameters to produce a curve that best fits the given dataset over $t$ is the aim.
 
-2.**Loading and Preparing Data**
+2.  **Loading and Preparing Data**
      loaded the experimental data and checked its formatting and integrity.
      prepared $t$ values that meet the parametric shape's constraints uniformly across the specified range.
 
- 3. **The Loss Function and Fitting Method**
+3.  **The Loss Function and Fitting Method**
      To make sure the fit is resilient to outliers and offers a trustworthy match to the real data distribution, the L1 loss (sum of absolute differences) was chosen.
      For parameter optimization, a function to calculate the L1 distance between observed data and the predicted curve was defined.
 
- 4. **Model Fitting & Optimization Strategy** Utilized a two-step procedure with Python's `scipy.optimize` library:
+4.  **Model Fitting & Optimization Strategy** Utilized a two-step procedure with Python's `scipy.optimize` library:
      * L-BFGS-B for effective local refinement with parameter constraints; Differential Evolution for preliminary global searching.
      To guarantee believable, stable answers, set suitable constraints for $\theta$, $M$, and $X$.
     Iteratively refined the fit until the loss was minimized and all constraints were satisfied.
 
-5. **Verification and Diagnostics**
+5.  **Verification and Diagnostics**
      For transparency, the ideal parameter values and total L1 loss were noted and published.
      produced a fitted curve plot (`outputs/fitted_curve.png`) for examination.
      All parameters and outcomes were saved in `outputs/submission_report.txt`.
 
- 6. **Visualization**
+6.  **Visualization**
      For clarity, the final parametric equations with substituted parameter values were presented in LaTeX.
      gave reviewers access to an interactive Desmos graphic so they could see and work with the curve in real time.
 
