@@ -64,7 +64,10 @@ This project demonstrates parametric curve fitting and model optimization in Pyt
 
 ### Directory Structure
 
-├── main.py # Main script for curve fitting and optimization ├── src/ # Supporting modules for model, optimization, and utilities ├── outputs/ # Contains fitted_curve.png, submission_report.txt, etc. └── README.md # This documentation
+├── main.py # Main script for curve fitting and optimization 
+├── src/ # Supporting modules for model, optimization, and utilities 
+├── outputs/ # Contains fitted_curve.png, submission_report.txt, etc. 
+└── README.md # This documentation
 
 ### Usage & Submission Notes
 
