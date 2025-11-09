@@ -22,36 +22,34 @@ $$
 This project demonstrates parametric curve fitting and model optimization in Python for a set of $(x, y)$ data points. This section details all key steps and rationale behind my choices:
 
 1.  **Understanding the Model**
-    The underlying parametric equations feature three unknowns: $\theta$, $M$, and $X$.
-    The goal is to fit these parameters so the generated curve best matches the provided dataset over $t$.
+    Three unknowns are present in the underlying parametric equations.: $\theta$, $M$, and $X$.
+    Fitting these parameters to produce a curve that best fits the given dataset over $t$ is the aim.
 
-2.  **Data Loading & Preparation**
-    Loaded the experimental data and verified its integrity and formatting.
-    Prepared $t$ values uniformly over the given range, matching the requirements of the parametric shape.
+2.**Loading and Preparing Data**
+     loaded the experimental data and checked its formatting and integrity.
+     prepared $t$ values that meet the parametric shape's constraints uniformly across the specified range.
 
-3.  **Fitting Method & Loss Function**
-    Selected L1 loss (sum of absolute differences) to ensure the fit is robust to outliers and provides a reliable match to the actual data distribution.
-    Defined a function to compute the L1 distance between observed data and predicted curve for parameter optimization.
+ 3. **The Loss Function and Fitting Method**
+     To make sure the fit is resilient to outliers and offers a trustworthy match to the real data distribution, the L1 loss (sum of absolute differences) was chosen.
+     For parameter optimization, a function to calculate the L1 distance between observed data and the predicted curve was defined.
 
-4.  **Model Fitting & Optimization Strategy**
-    Used Python's `scipy.optimize` library with a two-step process:
-    * Differential Evolution for initial global searching.
-    * L-BFGS-B for efficient local refinement with parameter bounds.
-    Set appropriate bounds for $\theta$, $M$, and $X$ to ensure plausible, stable solutions.
+ 4. **Model Fitting & Optimization Strategy** Utilized a two-step procedure with Python's `scipy.optimize` library:
+     * L-BFGS-B for effective local refinement with parameter constraints; Differential Evolution for preliminary global searching.
+     To guarantee believable, stable answers, set suitable constraints for $\theta$, $M$, and $X$.
     Iteratively refined the fit until the loss was minimized and all constraints were satisfied.
 
-5.  **Diagnostics & Verification**
-    Recorded and reported the optimal parameter values and total L1 loss for transparency.
-    Generated a plot of the fitted curve (`outputs/fitted_curve.png`) for visual inspection.
-    Saved all parameters and results in `outputs/submission_report.txt`.
+5. **Verification and Diagnostics**
+     For transparency, the ideal parameter values and total L1 loss were noted and published.
+     produced a fitted curve plot (`outputs/fitted_curve.png`) for examination.
+     All parameters and outcomes were saved in `outputs/submission_report.txt`.
 
-6.  **Visualization**
-    Presented the final parametric equations in LaTeX with substituted parameter values for clarity.
-    Provided an interactive Desmos visualization so reviewers can view and manipulate the curve dynamically.
+ 6. **Visualization**
+     For clarity, the final parametric equations with substituted parameter values were presented in LaTeX.
+     gave reviewers access to an interactive Desmos graphic so they could see and work with the curve in real time.
 
-7.  **Documentation and Humanized Summary**
-    All steps, choices, and code are fully documented for easy review.
-    Project structure ensures reproducibility and transparency, making it easy for others to understand and build upon.
+ 7. **Documentation**
+     For ease of review, every procedure, decision, and piece of code is thoroughly documented.
+     Reproducibility and transparency are guaranteed by project structure, which makes it simple for others to comprehend and expand upon.
 
 ---
 
@@ -71,6 +69,4 @@ This project demonstrates parametric curve fitting and model optimization in Pyt
 
 ### Usage & Submission Notes
 
-* This README summarizes all key steps, fitted equations, parameter values, and visualization link.
-* Code, data, and output files are present in their appropriate folders for review and reproducibility.
-* The interactive Desmos link above allows for direct visual assessment of the fitted curve.
+All important procedures, fitted equations, parameter values, and a visualization link are compiled in this README.  For review and repeatability, code, data, and output files are located in the proper directories.  Direct visual evaluation of the fitted curve is possible with the interactive Desmos link mentioned above.
